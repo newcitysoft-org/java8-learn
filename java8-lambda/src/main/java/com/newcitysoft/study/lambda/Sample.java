@@ -21,7 +21,7 @@ public class Sample {
         return list;
     }
 
-    private static List<Student> initList() {
+    public static List<Student> initList() {
         List<Student> students = new ArrayList<>();
 
         students.add(Student.builder().stuId("120402033").name("tianlixin").age(26)
