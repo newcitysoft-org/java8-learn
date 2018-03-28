@@ -1,4 +1,4 @@
-package com.newcitysoft.study.lambda;
+package com.newcitysoft.study.lambda.entity;
 
 /**
  * @author lixin.tian@renren-inc.com

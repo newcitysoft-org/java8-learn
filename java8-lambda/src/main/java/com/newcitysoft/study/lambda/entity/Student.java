@@ -1,4 +1,4 @@
-package com.newcitysoft.study.lambda;
+package com.newcitysoft.study.lambda.entity;
 
 import lombok.Builder;
 import lombok.Data;
