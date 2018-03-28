@@ -12,6 +12,7 @@
     <modules>
         <module>java8-growing</module>
         <module>java8-jvs</module>
+        <module>java8-lambda</module>
     </modules>
 
     <dependencies>
