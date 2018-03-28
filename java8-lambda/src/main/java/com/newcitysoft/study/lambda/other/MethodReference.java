@@ -39,10 +39,19 @@ public class MethodReference {
         System.out.println(Arrays.toString(multiplesOf3.toArray()));
         System.out.println(multiplesOf3.contains(3));
 
-        Student project = Student.builder().name("Blade").build();
-        Arrays.asList(project).stream()
+        Student student = Student.builder().name("Blade").build();
+        Student student2 = Student.builder().name("Acice").build();
+        Student student3 = Student.builder().name("Bob").build();
+
+        List<Student> students = Arrays.asList(student, student2, student3);
+
+        long count = students.stream()
                 .map(Student::getName)
                 .count();
+        System.out.println(count);
+
+        String collection = students.stream().map(Student::getName).reduce((s1, s2) -> s1 + " " + s2).get();
+        System.out.println(collection);
 
     }
 
