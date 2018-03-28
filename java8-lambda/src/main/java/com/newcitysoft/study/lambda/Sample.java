@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
+import static java.util.stream.Collectors.toList;
+
 /**
  * @author lixin.tian@renren-inc.com
  * @date 2018/3/28 13:57
@@ -14,11 +16,7 @@ import java.util.function.Predicate;
 public class Sample {
 
     private static List<Student> filter(List<Student> students, Predicate<Student> predicate) {
-        List<Student> list = new ArrayList<>();
-
-        students.stream().filter(predicate).forEach(student -> list.add(student));
-
-        return list;
+        return students.stream().filter(predicate).collect(toList());
     }
 
     public static List<Student> initList() {
