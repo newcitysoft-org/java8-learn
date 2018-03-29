@@ -14,6 +14,7 @@
         <module>java8-jvs</module>
         <module>java8-lambda</module>
         <module>java8-default-methods</module>
+        <module>java8-optional</module>
     </modules>
 
     <dependencies>
