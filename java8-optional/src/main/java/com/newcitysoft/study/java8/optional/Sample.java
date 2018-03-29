@@ -2,6 +2,7 @@ package com.newcitysoft.study.java8.optional;
 
 import java.util.Optional;
 import java.util.Properties;
+import java.util.function.Supplier;
 
 /**
  * @author lixin.tian@renren-inc.com
@@ -55,21 +56,27 @@ public class Sample {
         user.setUsername("biezhi");
         user.setPassword("123456");
         user.setOptAddress(Optional.of(new Address("达尔文路", "88号")));
-        user.setAge(30);
+        user.setAge(76);
 
-//        Address address1 = null;
-//        try {
+        Address address1 = null;
+        try {
 //            address1 = user.getOptAddress().filter(address -> address.getDoor().contains("878"))
-//                    .orElseThrow(new Supplier<Throwable>() {
+//                    .orElseThrow(
+//                            new Supplier<Throwable>() {
 //                        @Override
 //                        public Throwable get() {
 //                            return new Exception("挂了");
 //                        }
-//                    });
-//        } catch (Throwable throwable) {
-//            throwable.printStackTrace();
-//        }
-//        System.out.println(address1);
+//                    };
+
+            address1 = user.getOptAddress()
+                    .filter(address -> address.getDoor().contains("878"))
+                    .orElseThrow(() -> new Exception("挂了"));
+
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+        System.out.println(address1);
 
         System.out.println(getStreet(Optional.of(user), 50));
     }
