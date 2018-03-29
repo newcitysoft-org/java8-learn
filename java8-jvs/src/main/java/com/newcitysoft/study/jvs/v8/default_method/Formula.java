@@ -12,7 +12,18 @@ package com.newcitysoft.study.jvs.v8.default_method;
  * @date 2018-01-26 13:27
  */
 public interface Formula {
+	/**
+	 * 计算
+	 * @param a
+	 * @return
+	 */
 	double calculate(int a);
+
+	/**
+	 * 求平方根
+	 * @param a
+	 * @return
+	 */
 	default double sqrt(int a) {
 		return Math.sqrt(a);
 	}
