@@ -2,7 +2,9 @@ package com.newcitysoft.study.java8.stream.lesson2;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * 扁平流
@@ -20,5 +22,17 @@ public class Demo4 {
                 .distinct()
                 .collect(Collectors.toList())
                 .forEach(word -> System.out.println(word));
+
+
+//        list.stream()
+//                .map(word -> word.replace(" ", ""))
+//                .flatMap(word -> {
+//                    byte[] chars = word.getBytes();
+//                    System.out.println(chars);
+//                    return Stream.of(chars);
+//                })
+//                .distinct()
+//                .forEach(chars -> System.out.println(chars));
+
     }
 }
