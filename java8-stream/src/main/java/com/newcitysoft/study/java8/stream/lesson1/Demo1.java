@@ -1,4 +1,4 @@
-package com.newcitysoft.study.java8.stream;
+package com.newcitysoft.study.java8.stream.lesson1;
 
 import com.newcitysoft.study.lambda.Sample;
 import com.newcitysoft.study.lambda.entity.Student;
