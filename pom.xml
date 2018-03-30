@@ -15,6 +15,7 @@
         <module>java8-lambda</module>
         <module>java8-default-methods</module>
         <module>java8-optional</module>
+        <module>java8-stream</module>
     </modules>
 
     <dependencies>
