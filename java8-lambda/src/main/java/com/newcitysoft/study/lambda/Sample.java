@@ -23,13 +23,19 @@ public class Sample {
         List<Student> students = new ArrayList<>();
 
         students.add(Student.builder().stuId("120402033").name("tianlixin").age(26)
-                .bedroom("323").major("软件工程").gender(Gender.MALE).tel("15841694657").build());
+                .bedroom("北三323").major("软件工程").gender(Gender.MALE).tel("15841694657").build());
 
         students.add(Student.builder().stuId("120402055").name("xiaohaun").age(25)
-                .bedroom("623").major("软件工程").gender(Gender.FEMALE).tel("15841694612").build());
+                .bedroom("北五623").major("软件工程").gender(Gender.FEMALE).tel("15841694612").build());
 
         students.add(Student.builder().stuId("120403045").name("yongxiaoxu").age(26)
-                .bedroom("456").major("运输经济").gender(Gender.FEMALE).tel("15841694612").build());
+                .bedroom("南六456").major("运输经济").gender(Gender.FEMALE).tel("15841694612").build());
+
+        students.add(Student.builder().stuId("120402021").name("hongyilian").age(24)
+                .bedroom("北五456").major("软件工程").gender(Gender.FEMALE).tel("15841692312").build());
+
+        students.add(Student.builder().stuId("120402036").name("yuduo").age(24)
+                .bedroom("北三323").major("软件工程").gender(Gender.MALE).tel("15841692312").build());
 
         return students;
     }
