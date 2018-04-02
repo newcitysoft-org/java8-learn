@@ -16,6 +16,7 @@
         <module>java8-default-methods</module>
         <module>java8-optional</module>
         <module>java8-stream</module>
+        <module>java8-datetime</module>
     </modules>
 
     <dependencies>
