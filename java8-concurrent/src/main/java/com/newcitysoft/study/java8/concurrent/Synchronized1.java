@@ -5,6 +5,7 @@ import java.util.concurrent.Executors;
 import java.util.stream.IntStream;
 
 /**
+ * 同步和非同步的Demo
  * @author lixin.tian@renren-inc.com
  * @date 2018/4/9 11:04
  */
