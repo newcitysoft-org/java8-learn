@@ -18,6 +18,7 @@
         <module>java8-stream</module>
         <module>java8-datetime</module>
         <module>java8-concurrent</module>
+        <module>java8-nashorn</module>
     </modules>
 
     <dependencies>
