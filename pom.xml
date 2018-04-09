@@ -19,6 +19,7 @@
         <module>java8-datetime</module>
         <module>java8-concurrent</module>
         <module>java8-nashorn</module>
+        <module>java8-completablefuture</module>
     </modules>
 
     <dependencies>
