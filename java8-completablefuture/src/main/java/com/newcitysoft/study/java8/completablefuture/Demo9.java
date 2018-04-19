@@ -10,24 +10,26 @@ import java.util.concurrent.TimeUnit;
  */
 public class Demo9 {
 
-    private static CompletableFuture<Integer> m1(){
+    public static CompletableFuture<Integer> m1(){
         return CompletableFuture.supplyAsync(() -> {
             try {
                 TimeUnit.SECONDS.sleep(3);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+            System.out.println("m1");
             return 2333;
         });
     }
 
-    private static CompletableFuture<Integer> m2(){
+    public static CompletableFuture<Integer> m2(){
         return CompletableFuture.supplyAsync(() -> {
             try {
                 TimeUnit.SECONDS.sleep(2);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+            System.out.println("m2");
             return 8877;
         });
     }
