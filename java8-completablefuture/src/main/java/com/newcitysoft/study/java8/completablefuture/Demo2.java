@@ -22,7 +22,39 @@ import java.util.concurrent.TimeUnit;
  */
 public class Demo2 {
 
-    public static void main(String[] args) {
+    private static void test() {
+        CompletableFuture.supplyAsync(() -> 5566)
+                .whenComplete((a, b) -> {
+//            System.out.println("---");
+                    System.out.println(a);
+                    System.out.println(b);
+                });
+    }
+
+    private static void testExeception() {
+        try {
+            CompletableFuture<Integer> completableFuture = CompletableFuture.supplyAsync(() -> {
+                System.out.println("开始执行运算");
+                try {
+                    TimeUnit.SECONDS.sleep(3);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                int a = 1/0;
+                System.out.println("执行结束");
+                return 0;
+            });
+
+            completableFuture.exceptionally(b -> {
+                System.out.println(b);
+                return 0;
+            }).get();
+        } catch (InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void testExceptionally() {
         CompletableFuture<Integer> uCompletableFuture = CompletableFuture.supplyAsync(() -> {
             System.out.println("开始执行运算");
             try {
@@ -49,5 +81,10 @@ public class Demo2 {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
+    }
+
+
+    public static void main(String[] args) {
+        testExeception();
     }
 }
